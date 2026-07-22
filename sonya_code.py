@@ -43,4 +43,4 @@ def strategy(profits):
         "total_pnl": round(total_pnl, 2),
         "win_rate": round(win_rate, 2)
     }
-    return strategy
+    return strategy, total_pnl
