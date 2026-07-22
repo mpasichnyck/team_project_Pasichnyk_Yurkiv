@@ -11,3 +11,5 @@ df.columns = df.columns.get_level_values(0)
 df=maksym_code.clean_data(df)
 df=maksym_code.calculate_moving_average(df)
 df=maksym_code.signals(df)
+with open("extra files to project/applebuysell.csv", "w") as file:
+    df.to_csv(file)
