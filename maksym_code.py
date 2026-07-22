@@ -11,6 +11,6 @@ def clean_data(df):
     df = df.drop_duplicates()
     df = df.sort_index()
     return df
-# def calculate_moving_average(df):
-#     df["Short_MA"]=df["Close"].rolling(window=20).mean()
-#     df["Long_MA"]=df["Close"].rolling(window=50).mean()
+def calculate_moving_average(df):
+    df["Short_MA"]=df["Close"].rolling(window=20).mean()
+    df["Long_MA"]=df["Close"].rolling(window=50).mean()
