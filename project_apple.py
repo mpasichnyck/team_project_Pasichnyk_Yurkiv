@@ -20,5 +20,9 @@ df, profits = sonya_code.calculate_pnl(df)
 print(profits)
 strategy = sonya_code.strategy(profits)
 print(strategy)
+with open("extra files to project/our_profits_data", "w", newline="") as file:
+    writer = csv.DictWriter(file,fieldnames=["Buy_Date","Buy_Price","Sell_Date","Sell_Price","P&L"])
+    writer.writeheader()
+    writer.writerows(profits)
 
 
